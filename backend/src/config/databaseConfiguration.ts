@@ -1,6 +1,6 @@
-export { getDatabaseConfiguration };
+export { getDatabaseConfiguration }
 
-export type DatabaseConfiguration = ReturnType<typeof getDatabaseConfiguration>;
+export type DatabaseConfiguration = ReturnType<typeof getDatabaseConfiguration>
 
 const getDatabaseConfiguration = () => ({
   host: process.env.POSTGRES_HOST ?? 'localhost',
@@ -10,4 +10,4 @@ const getDatabaseConfiguration = () => ({
   database: process.env.POSTGRES_DATABASE ?? 'food',
   useTLS: process.env.POSTGRES_TLS === 'true',
   poolSize: 10,
-});
+})

@@ -1,8 +1,8 @@
-import { getDatabaseConfiguration } from "./databaseConfiguration.ts";
+import { getDatabaseConfiguration } from "./databaseConfiguration.ts"
 
-export { getConfiguration };
+export { getConfiguration }
 
-export type Configuration = ReturnType<typeof getConfiguration>;
+export type Configuration = ReturnType<typeof getConfiguration>
 
 const getConfiguration = () => ({
   env: process.env.ENV ?? 'development',
@@ -11,4 +11,4 @@ const getConfiguration = () => ({
     name: 'food',
   },
   database: getDatabaseConfiguration(),
-});
+})

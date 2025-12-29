@@ -1,9 +1,9 @@
-import { sql } from 'drizzle-orm';
+import { sql } from 'drizzle-orm'
 
-import type { Column, SQL } from 'drizzle-orm';
+import type { Column, SQL } from 'drizzle-orm'
 
 export const unaccent = (
   column: Column | SQL.Aliased | SQL | string
 ): SQL<string> => {
-  return sql`UNACCENT(${column})`;
-};
+  return sql`UNACCENT(${column})`
+}

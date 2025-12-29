@@ -1,6 +1,6 @@
-import { sql } from 'drizzle-orm';
+import { sql } from 'drizzle-orm'
 
-import type { SQLExpression } from './types.ts';
+import type { SQLExpression } from './types.ts'
 
 export function jsonAgg<Type>(
   sqlExpression: SQLExpression<Type>,
@@ -8,5 +8,5 @@ export function jsonAgg<Type>(
 ) {
   return sql<
     Type[]
-  >`json_agg(${sqlExpression}${sortExpressions ? sql` order by ${sql.join(sortExpressions, sql`, `)}` : sql``})`;
+  >`json_agg(${sqlExpression}${sortExpressions ? sql` order by ${sql.join(sortExpressions, sql`, `)}` : sql``})`
 }

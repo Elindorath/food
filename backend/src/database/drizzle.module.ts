@@ -1,6 +1,6 @@
-import { Module, Global } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
-import { DrizzleService } from './drizzle.service.ts';
+import { Module, Global } from '@nestjs/common'
+import { ConfigModule } from '@nestjs/config'
+import { DrizzleService } from './drizzle.service.ts'
 
 @Global()
 @Module({

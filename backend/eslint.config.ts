@@ -1,25 +1,25 @@
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath } from 'node:url'
 
 /**
  * TODO: fix it when this plugin exposes types.
  * @see: https://github.com/eslint-community/eslint-plugin-eslint-comments/issues/214
  */
 // @ts-expect-error: TS7016 because this plugin doesn't expose types.
-import eslintComments from '@eslint-community/eslint-plugin-eslint-comments';
-import { includeIgnoreFile } from '@eslint/compat';
-import eslint from '@eslint/js';
-import pluginJest from 'eslint-plugin-jest';
-import { defineConfig } from 'eslint/config';
-import globals from 'globals';
-import tseslint from 'typescript-eslint';
+import eslintComments from '@eslint-community/eslint-plugin-eslint-comments'
+import { includeIgnoreFile } from '@eslint/compat'
+import eslint from '@eslint/js'
+import pluginJest from 'eslint-plugin-jest'
+import { defineConfig } from 'eslint/config'
+import globals from 'globals'
+import tseslint from 'typescript-eslint'
 
 /* eslint-disable @typescript-eslint/no-unused-vars -- Available constants to set eslint rule level */
-const OFF = 'off';
-const WARN = 'warn';
-const ERROR = 'error';
+const OFF = 'off'
+const WARN = 'warn'
+const ERROR = 'error'
 /* eslint-enable */
 
-const gitignorePath = fileURLToPath(new URL('.gitignore', import.meta.url));
+const gitignorePath = fileURLToPath(new URL('.gitignore', import.meta.url))
 
 export default defineConfig(
   includeIgnoreFile(gitignorePath, 'Imported .gitignore patterns'),
@@ -172,4 +172,4 @@ export default defineConfig(
       'jest/unbound-method': ERROR,
     },
   }
-);
+)

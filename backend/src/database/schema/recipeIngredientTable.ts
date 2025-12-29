@@ -1,8 +1,8 @@
-import { pgTable, uuid, varchar, decimal, unique, index } from 'drizzle-orm/pg-core';
-import { relations } from 'drizzle-orm';
-import { recipeTable } from './recipeTable.ts';
-import { ingredientTable } from './ingredientTable.ts';
-import { uuidv7 } from '../sqlHelpers/uuidv7.ts';
+import { pgTable, uuid, varchar, decimal, unique, index } from 'drizzle-orm/pg-core'
+import { relations } from 'drizzle-orm'
+import { recipeTable } from './recipeTable.ts'
+import { ingredientTable } from './ingredientTable.ts'
+import { uuidv7 } from '../sqlHelpers/uuidv7.ts'
 
 export const recipeIngredientTable = pgTable(
   'recipe_ingredient',
@@ -24,7 +24,7 @@ export const recipeIngredientTable = pgTable(
     index('idx_recipe_ingredient_recipe_id').on(table.recipeId),
     index('idx_recipe_ingredient_ingredient_id').on(table.ingredientId),
   ],
-);
+)
 
 export const recipeIngredientRelations = relations(recipeIngredientTable, ({ one }) => ({
   recipe: one(recipeTable, {
@@ -35,4 +35,4 @@ export const recipeIngredientRelations = relations(recipeIngredientTable, ({ one
     fields: [recipeIngredientTable.ingredientId],
     references: [ingredientTable.id],
   }),
-}));
+}))

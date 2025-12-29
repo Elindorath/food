@@ -1,7 +1,7 @@
-import { defineConfig } from 'drizzle-kit';
-import * as dotenv from 'dotenv';
+import { defineConfig } from 'drizzle-kit'
+import * as dotenv from 'dotenv'
 
-dotenv.config();
+dotenv.config()
 
 export default defineConfig({
   dialect: 'postgresql',
@@ -12,4 +12,4 @@ export default defineConfig({
   },
   verbose: true,
   strict: true,
-});
+})

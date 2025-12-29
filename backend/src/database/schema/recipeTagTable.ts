@@ -1,8 +1,8 @@
-import { pgTable, uuid, unique, index } from 'drizzle-orm/pg-core';
-import { relations } from 'drizzle-orm';
-import { recipeTable } from './recipeTable.ts';
-import { tagTable } from './tagTable.ts';
-import { uuidv7 } from '../sqlHelpers/uuidv7.ts';
+import { pgTable, uuid, unique, index } from 'drizzle-orm/pg-core'
+import { relations } from 'drizzle-orm'
+import { recipeTable } from './recipeTable.ts'
+import { tagTable } from './tagTable.ts'
+import { uuidv7 } from '../sqlHelpers/uuidv7.ts'
 
 export const recipeTagTable = pgTable(
   'recipe_tag',
@@ -22,7 +22,7 @@ export const recipeTagTable = pgTable(
     index('idx_recipe_tag_recipe_id').on(table.recipeId),
     index('idx_recipe_tag_tag_id').on(table.tagId),
   ],
-);
+)
 
 export const recipeTagRelations = relations(recipeTagTable, ({ one }) => ({
   recipe: one(recipeTable, {
@@ -33,4 +33,4 @@ export const recipeTagRelations = relations(recipeTagTable, ({ one }) => ({
     fields: [recipeTagTable.tagId],
     references: [tagTable.id],
   }),
-}));
+}))

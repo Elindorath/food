@@ -7,12 +7,12 @@ import {
   timestamp,
   index,
   check,
-} from 'drizzle-orm/pg-core';
-import { relations, sql } from 'drizzle-orm';
-import { recipeIngredientTable } from './recipeIngredientTable.js';
-import { stepTable } from './stepTable.js';
-import { recipeTagTable } from './recipeTagTable.js';
-import { uuidv7 } from '../sqlHelpers/uuidv7.ts';
+} from 'drizzle-orm/pg-core'
+import { relations, sql } from 'drizzle-orm'
+import { recipeIngredientTable } from './recipeIngredientTable.ts'
+import { stepTable } from './stepTable.ts'
+import { recipeTagTable } from './recipeTagTable.ts'
+import { uuidv7 } from '../sqlHelpers/uuidv7.ts'
 
 export const recipeTable = pgTable(
   'recipe',
@@ -48,10 +48,10 @@ export const recipeTable = pgTable(
       sql`${table.preparationTime} + ${table.cookingTime}`,
     ),
   ],
-);
+)
 
 export const recipeRelations = relations(recipeTable, ({ many }) => ({
   recipeIngredients: many(recipeIngredientTable),
   steps: many(stepTable),
   recipeTags: many(recipeTagTable),
-}));
+}))

@@ -1,8 +1,8 @@
-import { sql } from 'drizzle-orm';
+import { sql } from 'drizzle-orm'
 
-import type { SQL } from 'drizzle-orm';
+import type { SQL } from 'drizzle-orm'
 
-import type { SQLExpression } from './types.ts';
+import type { SQLExpression } from './types.ts'
 
 export function coalesce<
   BaseType extends string | number | boolean,
@@ -12,5 +12,5 @@ export function coalesce<
   baseColumn: SQLExpression<InputType> | InputType,
   overrideColumn?: SQLExpression<OutputType> | OutputType
 ): SQL<InputType | OutputType> {
-  return sql`coalesce(${baseColumn}, ${overrideColumn})`;
+  return sql`coalesce(${baseColumn}, ${overrideColumn})`
 }
