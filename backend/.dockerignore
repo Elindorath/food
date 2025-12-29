@@ -1,0 +1,17 @@
+# Ignore everything
+*
+
+# Allow files and directories with a pattern starting with !
+!package.json
+!yarn.lock
+!.yarnrc.yml
+!build-config/**
+!tsconfig.json
+!tsconfig.build.json
+!src/**/*.ts
+
+# Re-ignoring unwanted files and directories in previously allowed ones
+src/**/__tests__
+src/**/__test__
+src/**/*.test.ts
+src/**/*.spec.ts

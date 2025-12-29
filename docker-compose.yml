@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: postgres:18.1-alpine3.23
+    container_name: food-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: elindorath
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: food
+      TZ: GMT
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U elindorath -d food"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
+    driver: local

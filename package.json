@@ -1,0 +1,25 @@
+{
+  "name": "food",
+  "version": "0.0.1",
+  "description": "Mobile recipe application with Node.js backend",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "mobile",
+    "design-system"
+  ],
+  "packageManager": "yarn@4.12.0",
+  "engines": {
+    "node": "24.12.0"
+  },
+  "scripts": {
+    "dev:backend": "yarn workspace @food/backend start:dev",
+    "dev:mobile": "yarn workspace @food/mobile start",
+    "build:backend": "yarn workspace @food/backend build",
+    "build:mobile": "yarn workspace @food/mobile build",
+    "test:backend": "yarn workspace @food/backend test",
+    "test:mobile": "yarn workspace @food/mobile test",
+    "lint:backend": "yarn workspace @food/backend lint",
+    "lint:mobile": "yarn workspace @food/mobile lint"
+  }
+}

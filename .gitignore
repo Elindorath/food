@@ -1,0 +1,311 @@
+# ============================================
+# Dependencies
+# ============================================
+
+# Node modules
+node_modules/
+**/node_modules/
+
+# Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# Package manager lock files (keep yarn.lock, ignore others)
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ============================================
+# Build outputs
+# ============================================
+
+# TypeScript
+*.tsbuildinfo
+dist/
+build/
+*.js.map
+*.d.ts.map
+
+# NestJS
+dist/
+build/
+*.js
+!*.config.js
+
+# React Native / Expo
+.expo/
+.expo-shared/
+.expo/
+web-build/
+dist/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# ============================================
+# Environment variables
+# ============================================
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+*.env
+
+# ============================================
+# Database
+# ============================================
+
+# PostgreSQL
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+pgdata/
+postgres-data/
+
+# Drizzle migrations (keep schema, ignore generated)
+# Note: Keep drizzle/ directory structure but ignore generated files if any
+
+# ============================================
+# Logs
+# ============================================
+
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# ============================================
+# Testing
+# ============================================
+
+coverage/
+*.lcov
+.nyc_output/
+.jest/
+*.test.js.snap
+
+# ============================================
+# IDE & Editors
+# ============================================
+
+# VS Code / Cursor
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.vim/
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ============================================
+# OS
+# ============================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ============================================
+# Docker
+# ============================================
+
+docker-compose.override.yml
+
+# ============================================
+# Temporary files
+# ============================================
+
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.swo
+*~
+.cache/
+
+# ============================================
+# Expo specific
+# ============================================
+
+.expo/
+.expo-shared/
+.expo/
+web-build/
+dist/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# Expo EAS
+.eas/
+
+# ============================================
+# React Native
+# ============================================
+
+# Metro bundler
+.metro-health-check*
+
+# iOS
+ios/Pods/
+ios/build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+DerivedData/
+*.hmap
+*.ipa
+*.xcuserstate
+ios/.xcode.env.local
+
+# Android
+android/app/build/
+android/build/
+android/.gradle/
+android/local.properties
+*.apk
+*.ap_
+*.aab
+.gradle/
+local.properties
+*.iml
+*.hprof
+.cxx/
+*.keystore
+!debug.keystore
+
+# ============================================
+# Misc
+# ============================================
+
+# SWC
+.swc/
+
+# Turbo
+.turbo/
+
+# Vercel
+.vercel
+
+# Misc
+*.pem
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+*.jks
+*.keystore
+!debug.keystore
+
+# Storybook
+storybook-static/
+
+# ============================================
+# Project specific
+# ============================================
+
+# Keep these directories but ignore their contents if needed
+# Uncomment if you want to ignore specific project files
+# backend/dist/
+# mobile/.expo/
+# design-system/dist/
