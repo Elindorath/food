@@ -1,8 +1,6 @@
 import { NestFactory } from '@nestjs/core'
-import {
-  FastifyAdapter,
-  type NestFastifyApplication,
-} from '@nestjs/platform-fastify'
+import { FastifyAdapter } from '@nestjs/platform-fastify'
+import type { NestFastifyApplication } from '@nestjs/platform-fastify'
 import { AppModule } from './app.module.ts'
 import { ValidationPipe } from '@nestjs/common'
 
@@ -17,4 +15,5 @@ async function bootstrap() {
   await app.listen(3000, '0.0.0.0')
   console.log(`Application is running on: http://localhost:3000`)
 }
-bootstrap()
+
+void bootstrap()

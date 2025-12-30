@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common'
 import { ConfigModule } from '@nestjs/config'
 import { DrizzleModule } from './database/drizzle.module.ts'
 import { getConfiguration } from './config/configuration.ts'
+import { RecipesModule } from './recipes/recipes.module.ts'
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { getConfiguration } from './config/configuration.ts'
       isGlobal: true,
     }),
     DrizzleModule,
+    RecipesModule,
   ],
   controllers: [],
   providers: [],

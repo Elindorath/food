@@ -11,7 +11,6 @@ export function jsonBuildObject<Shape extends { [key: string]: SQLExpression }>(
 ) {
   const sqlChunks: SQL[] = []
 
-  // eslint-disable-next-line no-restricted-syntax -- Temporary
   for (const [key, value] of Object.entries(shape)) {
     sqlChunks.push(sql.join([sql.raw(`'${key}'`), sql`${value}`], sql`, `))
   }

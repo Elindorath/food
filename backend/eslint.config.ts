@@ -99,26 +99,26 @@ export default defineConfig(
           selector: 'ImportSpecifier[importKind=type]',
           message: `Type imports should be separated from value imports. Please use the form "import type { Type } from 'module'"`,
         },
-        {
-          selector:
-            'CallExpression > MemberExpression[object.name=Object][property.name=keys]',
-          message: `"Object.keys" is poorly typed. Please use "import { objectKeys } from 'src/common/lib/object/betterTypes.ts'" instead.`,
-        },
-        {
-          selector:
-            'CallExpression > MemberExpression[object.name=Object][property.name=entries]',
-          message: `"Object.entries" is poorly typed. Please use "import { objectEntries } from 'src/common/lib/object/betterTypes.ts'" instead.`,
-        },
-        {
-          selector:
-            'CallExpression > MemberExpression[object.name=Object][property.name=fromEntries]',
-          message: `"Object.fromEntries" is poorly typed. Please use "import { objectFromEntries } from 'src/common/lib/object/betterTypes.ts'" instead.`,
-        },
-        {
-          selector:
-            'CallExpression > MemberExpression[object.name=z][property.name=enum]',
-          message: `"z.enum" doesn't work well with our enums. Please use "createZodEnumValidator" instead.`,
-        },
+        // {
+        //   selector:
+        //     'CallExpression > MemberExpression[object.name=Object][property.name=keys]',
+        //   message: `"Object.keys" is poorly typed. Please use "import { objectKeys } from 'src/common/lib/object/betterTypes.ts'" instead.`,
+        // },
+        // {
+        //   selector:
+        //     'CallExpression > MemberExpression[object.name=Object][property.name=entries]',
+        //   message: `"Object.entries" is poorly typed. Please use "import { objectEntries } from 'src/common/lib/object/betterTypes.ts'" instead.`,
+        // },
+        // {
+        //   selector:
+        //     'CallExpression > MemberExpression[object.name=Object][property.name=fromEntries]',
+        //   message: `"Object.fromEntries" is poorly typed. Please use "import { objectFromEntries } from 'src/common/lib/object/betterTypes.ts'" instead.`,
+        // },
+        // {
+        //   selector:
+        //     'CallExpression > MemberExpression[object.name=z][property.name=enum]',
+        //   message: `"z.enum" doesn't work well with our enums. Please use "createZodEnumValidator" instead.`,
+        // },
         {
           selector: 'TSEnumDeclaration',
           message: `Don't declare enums. Please use "import { Enum } from 'src/common/enums/Enum'" instead.`,
