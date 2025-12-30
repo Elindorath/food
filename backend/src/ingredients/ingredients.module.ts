@@ -11,3 +11,4 @@ import { DrizzleModule } from '../database/drizzle.module.ts'
   exports: [IngredientsService],
 })
 export class IngredientsModule {}
+

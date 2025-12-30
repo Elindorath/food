@@ -4,6 +4,7 @@ import { DrizzleModule } from './database/drizzle.module.ts'
 import { getConfiguration } from './config/configuration.ts'
 import { RecipesModule } from './recipes/recipes.module.ts'
 import { IngredientsModule } from './ingredients/ingredients.module.ts'
+import { TagsModule } from './tags/tags.module.ts'
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { IngredientsModule } from './ingredients/ingredients.module.ts'
     DrizzleModule,
     RecipesModule,
     IngredientsModule,
+    TagsModule,
   ],
   controllers: [],
   providers: [],

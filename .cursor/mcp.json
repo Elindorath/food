@@ -1,9 +1,13 @@
 {
 	"mcpServers": {
 		"eslint": {
+			"type": "stdio",
 			"command": "npx",
 			"args": ["@eslint/mcp@latest"],
-			"env": {}
+			"env": {
+				"ESLINT_FLAGS": "unstable_native_nodejs_ts_config",
+				"NODE_OPTIONS": "--experimental-transform-types"
+			}
 		}
 	}
 }

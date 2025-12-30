@@ -5,3 +5,4 @@ export const createIngredientSchema = z.object({
 })
 
 export type CreateIngredientDto = z.infer<typeof createIngredientSchema>
+
