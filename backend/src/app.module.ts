@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config'
 import { DrizzleModule } from './database/drizzle.module.ts'
 import { getConfiguration } from './config/configuration.ts'
 import { RecipesModule } from './recipes/recipes.module.ts'
+import { IngredientsModule } from './ingredients/ingredients.module.ts'
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { RecipesModule } from './recipes/recipes.module.ts'
     }),
     DrizzleModule,
     RecipesModule,
+    IngredientsModule,
   ],
   controllers: [],
   providers: [],
