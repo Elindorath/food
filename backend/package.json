@@ -30,6 +30,8 @@
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
+    "@fastify/swagger": "^9.6.1",
+    "@fastify/swagger-ui": "^5.2.3",
     "@nestjs/common": "11.1.10",
     "@nestjs/config": "4.0.2",
     "@nestjs/core": "11.1.10",
