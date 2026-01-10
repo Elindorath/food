@@ -1,0 +1,36 @@
+/**
+ * StepIndicator component - Badge (numéro) + Text (instruction)
+ */
+
+import { View } from 'react-native';
+import { Badge } from '../../atoms/Badge/Badge';
+import { Text } from '../../atoms/Text/Text';
+import type { StepIndicatorProps } from './StepIndicator.types';
+import { spacing } from '../../tokens/spacing';
+import { styles } from './StepIndicator.styles';
+
+export const StepIndicator = ({
+  stepNumber,
+  instruction,
+  duration,
+  style,
+  ...props
+}: StepIndicatorProps) => {
+  return (
+    <View style={[styles.container, style]} {...props}>
+      <Badge variant="primary" size="medium" style={styles.badge}>
+        {stepNumber}
+      </Badge>
+      <View style={[styles.content, { marginLeft: spacing[3] }]}>
+        <Text variant="body" style={styles.instruction}>
+          {instruction}
+        </Text>
+        {duration !== undefined ? (
+          <Text variant="caption" style={styles.duration}>
+            {duration} min
+          </Text>
+        ) : null}
+      </View>
+    </View>
+  );
+};
