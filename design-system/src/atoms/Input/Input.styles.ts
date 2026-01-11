@@ -2,11 +2,19 @@
  * Input component styles
  */
 
-import { createStyleSheet, spacing, typography, colors } from '../../unistyles';
+import { StyleSheet } from 'react-native-unistyles'
 
-export const inputStyles = createStyleSheet(() => ({
+import { colors } from '../../tokens/colors'
+import { spacing } from '../../tokens/spacing'
+import { typography } from '../../tokens/typography'
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars -- TODO: use colors from theme
+export const styles = StyleSheet.create((theme) => ({
   container: {
     marginBottom: spacing[4],
+  },
+  label: {
+    marginBottom: 4,
   },
   input: {
     borderWidth: 1,
@@ -18,16 +26,20 @@ export const inputStyles = createStyleSheet(() => ({
     color: colors.neutral[900],
     backgroundColor: '#FFFFFF',
     minHeight: 44,
-  },
-  inputFocused: {
-    borderColor: colors.primary[600],
-  },
-  inputError: {
-    borderColor: colors.error[600],
-  },
-  inputDisabled: {
-    backgroundColor: colors.neutral[100],
-    color: colors.neutral[500],
+    variants: {
+      state: {
+        focused: {
+          borderColor: colors.primary[600],
+        },
+        error: {
+          borderColor: colors.error[600],
+        },
+        disabled: {
+          backgroundColor: colors.neutral[100],
+          color: colors.neutral[500],
+        },
+      },
+    },
   },
   errorText: {
     color: colors.error[600],

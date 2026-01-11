@@ -3,26 +3,24 @@
  */
 
 import { ActivityIndicator } from 'react-native';
-import type { SpinnerProps, SpinnerSize } from './Spinner.types';
+import type { SpinnerProps } from './Spinner.types';
 import { colors } from '../../tokens/colors';
-
-const sizeMap: { [key in SpinnerSize]: number } = {
-  small: 20,
-  medium: 32,
-  large: 48,
-};
+import { styles } from './Spinner.styles';
 
 export const Spinner = ({
   size = 'medium',
   color = colors.primary[600],
-  style,
   ...props
 }: SpinnerProps) => {
+  styles.useVariants({
+    size,
+  })
+
   return (
     <ActivityIndicator
       size={size === 'small' ? 'small' : 'large'}
       color={color}
-      style={[{ width: sizeMap[size], height: sizeMap[size] }, style]}
+      style={styles.spinner}
       {...props}
     />
   );
