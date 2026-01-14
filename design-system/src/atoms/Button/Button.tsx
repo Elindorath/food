@@ -4,16 +4,9 @@
 
 import { TouchableOpacity } from 'react-native';
 import type { ButtonProps } from './Button.types';
-import { getButtonStyles } from './Button.styles';
 import { Text } from '../Text/Text';
 import { Spinner } from '../Spinner/Spinner';
-import { createStyleSheet } from '../../unistyles';
-
-const fullWidthStyle = createStyleSheet(() => ({
-  fullWidth: {
-    width: '100%',
-  },
-}));
+import { styles } from './Button.styles';
 
 export const Button = ({
   children,
@@ -22,30 +15,27 @@ export const Button = ({
   fullWidth = false,
   disabled = false,
   loading = false,
-  style,
-  textStyle,
   onPress,
   ...props
 }: ButtonProps) => {
-  const styles = getButtonStyles(variant, size, disabled || loading);
-  const spinnerColor = typeof styles.text.color === 'string' ? styles.text.color : undefined;
+  styles.useVariants({
+    variant,
+    size,
+    fullWidth,
+  })
 
   return (
     <TouchableOpacity
-      style={[
-        styles.container,
-        fullWidth && fullWidthStyle.fullWidth,
-        style,
-      ]}
+      style={styles.container}
       onPress={onPress}
       disabled={disabled || loading}
       activeOpacity={0.7}
       {...props}
     >
       {loading ? (
-        <Spinner size="small" color={spinnerColor} />
+        <Spinner size="small" />
       ) : (
-        <Text style={[styles.text, textStyle]}>{children}</Text>
+        <Text variant="body">{children}</Text>
       )}
     </TouchableOpacity>
   );

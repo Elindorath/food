@@ -13,11 +13,10 @@ export const Header = ({
   title,
   leftActions = [],
   rightActions = [],
-  style,
   ...props
 }: HeaderProps) => {
   return (
-    <View style={[styles.container, style]} {...props}>
+    <View style={styles.container} {...props}>
       <View style={styles.leftActions}>
         {leftActions.map((action, index) => (
           <TouchableOpacity
@@ -37,7 +36,7 @@ export const Header = ({
           </TouchableOpacity>
         ))}
       </View>
-      <Text variant="h3" style={styles.title}>
+      <Text variant="h3">
         {title}
       </Text>
       <View style={styles.rightActions}>
@@ -45,7 +44,6 @@ export const Header = ({
           <TouchableOpacity
             key={index}
             onPress={action.onPress}
-            style={styles.actionButton}
           >
             {action.icon !== undefined ? (
               <Icon name={action.icon} size="medium" />

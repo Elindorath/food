@@ -24,11 +24,10 @@ export const RecipeDetailTemplate = ({
   rating,
   ingredients,
   steps,
-  style,
   ...props
 }: RecipeDetailTemplateProps) => {
   return (
-    <View style={[styles.container, style]} {...props}>
+    <View style={styles.container} {...props}>
       <Header {...header} />
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         {imageUrl !== undefined ? (
@@ -39,11 +38,11 @@ export const RecipeDetailTemplate = ({
           />
         ) : null}
         <View style={styles.infoSection}>
-          <Text variant="h2" style={styles.title}>
+          <Text variant="h2">
             {title}
           </Text>
           {description !== undefined ? (
-            <Text variant="body" style={styles.description}>
+            <Text variant="body">
               {description}
             </Text>
           ) : null}
@@ -54,19 +53,18 @@ export const RecipeDetailTemplate = ({
             preparationTime={preparationTime}
             cookingTime={cookingTime}
             rating={rating}
-            style={styles.metadataCard}
           />
         </View>
-        <Divider style={styles.divider} />
+        <Divider />
         <View style={styles.section}>
-          <Text variant="h4" style={styles.sectionTitle}>
+          <Text variant="h4">
             Ingrédients
           </Text>
           <IngredientList ingredients={ingredients} />
         </View>
-        <Divider style={styles.divider} />
+        <Divider />
         <View style={styles.section}>
-          <Text variant="h4" style={styles.sectionTitle}>
+          <Text variant="h4">
             Étapes
           </Text>
           <StepList steps={steps} />

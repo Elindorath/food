@@ -18,7 +18,6 @@ export const RecipeListTemplate = ({
   recipes,
   isLoading = false,
   onRecipePress,
-  style,
   ...props
 }: RecipeListTemplateProps) => {
   const renderRecipe = ({ item }: { item: RecipeCardProps }) => (
@@ -33,7 +32,7 @@ export const RecipeListTemplate = ({
       return (
         <View style={styles.loadingContainer}>
           {[1, 2, 3].map((i) => (
-            <LoadingSkeleton key={i} type="card" height={250} style={styles.skeleton} />
+            <LoadingSkeleton key={i} type="card" height={250} />
           ))}
         </View>
       );
@@ -61,7 +60,7 @@ export const RecipeListTemplate = ({
   };
 
   return (
-    <View style={[styles.container, style]} {...props}>
+    <View style={styles.container} {...props}>
       <Header {...header} />
       {onSearch && (
         <View style={styles.searchContainer}>

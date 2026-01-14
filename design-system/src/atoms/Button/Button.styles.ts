@@ -15,7 +15,7 @@ export const styles = StyleSheet.create((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     variants: {
-      color: {
+      variant: {
         primary: {
           backgroundColor: colors.primary[600],
           borderWidth: 0,
@@ -64,12 +64,20 @@ export const styles = StyleSheet.create((theme) => ({
           minHeight: 52,
         },
       },
+      fullWidth: {
+        true: {
+          width: '100%',
+        },
+        false: {
+          width: 'auto',
+        },
+      },
     },
   },
   text: {
     fontWeight: typography.fontWeight.semibold,
     variants: {
-      color: {
+      variant: {
         primary: {
           color: '#FFFFFF',
         },

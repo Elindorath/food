@@ -16,22 +16,21 @@ export const EmptyState = ({
   message,
   actionLabel,
   onAction,
-  style,
   ...props
 }: EmptyStateProps) => {
   return (
-    <View style={[styles.container, style]} {...props}>
-      <Icon name={icon} size="xlarge" color={colors.neutral[400]} style={styles.icon} />
-      <Text variant="h4" style={styles.title}>
+    <View style={styles.container} {...props}>
+      <Icon name={icon} size="xlarge" color={colors.neutral[400]} />
+      <Text variant="h4">
         {title}
       </Text>
       {message !== undefined ? (
-        <Text variant="body" style={styles.message}>
+        <Text variant="body">
           {message}
         </Text>
       ) : null}
       {actionLabel !== undefined && onAction !== undefined ? (
-        <Button variant="primary" onPress={onAction} style={styles.button}>
+        <Button variant="primary" onPress={onAction}>
           {actionLabel}
         </Button>
       ) : null}

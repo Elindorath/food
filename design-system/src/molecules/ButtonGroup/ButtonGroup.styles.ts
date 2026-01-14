@@ -1,18 +1,35 @@
-import { createStyleSheet, spacing } from '../../unistyles';
+import { StyleSheet } from 'react-native-unistyles'
 
-export const styles = createStyleSheet(() => ({
+import { spacing } from '../../tokens/spacing'
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars -- TODO: use colors from theme
+export const styles = StyleSheet.create((theme) => ({
   container: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-  },
-  fullWidth: {
-    width: '100%',
+    variants: {
+      fullWidth: {
+        true: {
+          width: '100%',
+        },
+        false: {
+          width: 'auto',
+        },
+      },
+    },
   },
   button: {
     flex: 1,
     minWidth: 100,
+    variants: {
+      firstItem: {
+        true: {
+          marginLeft: 0,
+        },
+        false: {
+          marginLeft: spacing[2],
+        },
+      },
+    },
   },
-  buttonSpacing: {
-    marginLeft: spacing[2],
-  },
-}));
+}))

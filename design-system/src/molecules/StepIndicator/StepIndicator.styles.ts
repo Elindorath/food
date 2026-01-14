@@ -1,6 +1,8 @@
-import { createStyleSheet, spacing } from '../../unistyles';
+import { StyleSheet } from 'react-native-unistyles'
+import { spacing } from '../../tokens/spacing'
 
-export const styles = createStyleSheet(() => ({
+// eslint-disable-next-line @typescript-eslint/no-unused-vars -- TODO: use colors from theme
+export const styles = StyleSheet.create((theme) => ({
   container: {
     flexDirection: 'row',
     alignItems: 'flex-start',
@@ -17,4 +19,4 @@ export const styles = createStyleSheet(() => ({
   duration: {
     color: '#6B7280',
   },
-}));
+}))

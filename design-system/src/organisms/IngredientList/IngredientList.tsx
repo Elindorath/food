@@ -10,11 +10,10 @@ import { styles } from './IngredientList.styles';
 
 export const IngredientList = ({
   ingredients,
-  style,
   ...props
 }: IngredientListProps) => {
   return (
-    <View style={[styles.container, style]} {...props}>
+    <View style={styles.container} {...props}>
       {ingredients.map((ingredient, index) => (
         <View key={index}>
           <IngredientRow {...ingredient} />

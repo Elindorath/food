@@ -16,7 +16,7 @@ const config: StorybookConfig = {
         babel: {
           plugins: [
             ['react-native-unistyles/plugin', {
-              root: '../src',
+              root: './src',
             }],
           ],
         },

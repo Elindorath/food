@@ -2,7 +2,6 @@
  * ButtonGroup component types
  */
 
-import type { ViewStyle } from 'react-native';
 import type { ButtonProps } from '../../atoms/Button/Button.types';
 
 export type ButtonGroupItem = {
@@ -16,5 +15,4 @@ export type ButtonGroupProps = {
   variant?: ButtonProps['variant'];
   size?: ButtonProps['size'];
   fullWidth?: boolean;
-  style?: ViewStyle;
 };

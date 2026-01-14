@@ -10,7 +10,7 @@ export const Tag = ({
   children,
   selected = false,
   onPress,
-  variant = 'default',
+  variant = 'primary',
   ...props
 }: TagProps) => {
   const displayVariant = selected ? 'primary' : variant;

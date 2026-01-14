@@ -45,42 +45,49 @@ export const typography = {
   // Typography variants
   variants: {
     h1: {
+      fontFamily: 'PlayfairDisplay',
       fontSize: 36,
       fontWeight: '700' as const,
       lineHeight: 1.2,
       letterSpacing: -0.5,
     },
     h2: {
+      fontFamily: 'PlayfairDisplay',
       fontSize: 30,
       fontWeight: '700' as const,
       lineHeight: 1.25,
       letterSpacing: -0.25,
     },
     h3: {
-      fontSize: 24,
-      fontWeight: '600' as const,
-      lineHeight: 1.3,
-      letterSpacing: 0,
+      fontFamily: 'PlayfairDisplay',
+      fontSize: 36,
+      fontWeight: '400' as const,
+      lineHeight: 1.2,
+      letterSpacing: -0.5,
     },
     h4: {
+      fontFamily: 'PlayfairDisplay',
       fontSize: 20,
       fontWeight: '600' as const,
       lineHeight: 1.35,
       letterSpacing: 0,
     },
     h5: {
+      fontFamily: 'PlayfairDisplay',
       fontSize: 18,
       fontWeight: '600' as const,
       lineHeight: 1.4,
       letterSpacing: 0,
     },
     h6: {
+      fontFamily: 'PlayfairDisplay',
       fontSize: 16,
       fontWeight: '600' as const,
       lineHeight: 1.5,
       letterSpacing: 0,
     },
     body: {
+      fontFamily: 'Inter-Bold',
       fontSize: 16,
       fontWeight: '400' as const,
       lineHeight: 1.5,

@@ -20,38 +20,37 @@ export const RecipeCard = ({
   cookingTime,
   rating,
   onPress,
-  style,
   ...props
 }: RecipeCardProps) => {
   const totalTime = (preparationTime ?? 0) + (cookingTime ?? 0);
 
   const content = (
-    <Card style={[styles.card, style]} {...props}>
+    <Card style={styles.card} {...props}>
       {imageUrl !== undefined ? (
         <Image source={{ uri: imageUrl }} style={styles.image} resizeMode="cover" />
       ) : null}
       <View style={styles.content}>
-        <Text variant="h4" style={styles.title}>
+        <Text variant="h4">
           {title}
         </Text>
         {description !== undefined ? (
-          <Text variant="bodySmall" style={styles.description} numberOfLines={2}>
+          <Text variant="bodySmall" numberOfLines={2}>
             {description}
           </Text>
         ) : null}
         <View style={styles.metadata}>
           {difficulty !== undefined ? (
-            <Badge variant="info" size="small" style={styles.badge}>
+            <Badge variant="info" size="small">
               Difficulté: {difficulty}/5
             </Badge>
           ) : null}
           {totalTime !== 0 ? (
-            <Badge variant="default" size="small" style={styles.badge}>
+            <Badge variant="primary" size="small">
               {totalTime} min
             </Badge>
           ) : null}
           {rating !== undefined ? (
-            <Badge variant="warning" size="small" style={styles.badge}>
+            <Badge variant="warning" size="small">
               ⭐ {rating}/5
             </Badge>
           ) : null}
@@ -59,7 +58,7 @@ export const RecipeCard = ({
         {tags.length !== 0 ? (
           <View style={styles.tags}>
             {tags.slice(0, 3).map((tag, index) => (
-              <Tag key={index} size="small" variant="default" style={index > 0 ? styles.tag : undefined}>
+              <Tag key={index} size="small" variant="primary">
                 {tag}
               </Tag>
             ))}

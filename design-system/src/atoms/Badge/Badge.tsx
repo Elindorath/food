@@ -11,15 +11,13 @@ export const Badge = ({
   children,
   variant,
   size = 'medium',
-  style,
-  textStyle,
   ...props
 }: BadgeProps) => {
   styles.useVariants({ color: variant, size });
 
   return (
-    <View style={[styles.container, style ?? {}]} {...props}>
-      <Text style={[styles.text, textStyle ?? {}]}>{children}</Text>
+    <View style={styles.container} {...props}>
+      <Text style={styles.text}>{children}</Text>
     </View>
   );
 };

@@ -10,7 +10,6 @@ import { RecipeCard } from '../../organisms/RecipeCard/RecipeCard';
 import { LoadingSkeleton } from '../../organisms/LoadingSkeleton/LoadingSkeleton';
 import { EmptyState } from '../../organisms/EmptyState/EmptyState';
 import type { SearchTemplateProps } from './SearchTemplate.types';
-import { spacing } from '../../tokens/spacing';
 import { styles } from './SearchTemplate.styles';
 import type { RecipeCardProps } from '../../organisms/RecipeCard/RecipeCard.types';
 
@@ -21,7 +20,6 @@ export const SearchTemplate = ({
   results,
   isLoading = false,
   onRecipePress,
-  style,
   ...props
 }: SearchTemplateProps) => {
   const renderRecipe = ({ item }: { item: RecipeCardProps }) => (
@@ -36,7 +34,7 @@ export const SearchTemplate = ({
       return (
         <View style={styles.loadingContainer}>
           {[1, 2, 3].map((i) => (
-            <LoadingSkeleton key={i} type="card" height={250} style={styles.skeleton} />
+            <LoadingSkeleton key={i} type="card" height={250} />
           ))}
         </View>
       );
@@ -63,7 +61,7 @@ export const SearchTemplate = ({
   };
 
   return (
-    <View style={[styles.container, style]} {...props}>
+    <View style={styles.container} {...props}>
       <Header {...header} />
       {onSearch && (
         <View style={styles.searchContainer}>
@@ -77,7 +75,7 @@ export const SearchTemplate = ({
           contentContainerStyle={styles.filtersContainer}
         >
           {filters.map((filter, index) => (
-            <Tag key={index} {...filter} style={[filter.style, index > 0 && { marginLeft: spacing[2] }]} />
+            <Tag key={index} {...filter} />
           ))}
         </ScrollView>
       )}

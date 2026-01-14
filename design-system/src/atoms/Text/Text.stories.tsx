@@ -24,6 +24,7 @@ export default meta;
 type Story = StoryObj<typeof Text>;
 
 export const H1: Story = {
+  name: 'H1',
   args: {
     children: 'Heading 1',
     variant: 'h1',
@@ -31,6 +32,7 @@ export const H1: Story = {
 };
 
 export const H2: Story = {
+  name: 'H2',
   args: {
     children: 'Heading 2',
     variant: 'h2',
@@ -38,6 +40,7 @@ export const H2: Story = {
 };
 
 export const H3: Story = {
+  name: 'H3',
   args: {
     children: 'Heading 3',
     variant: 'h3',

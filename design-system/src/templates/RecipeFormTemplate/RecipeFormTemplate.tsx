@@ -15,11 +15,10 @@ export const RecipeFormTemplate = ({
   ingredientsSection,
   stepsSection,
   actions,
-  style,
   ...props
 }: RecipeFormTemplateProps) => {
   return (
-    <View style={[styles.container, style]} {...props}>
+    <View style={styles.container} {...props}>
       <Header {...header} />
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         <FormSection {...infoSection} />

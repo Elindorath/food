@@ -1,6 +1,9 @@
-import { createStyleSheet, spacing, colors } from '../../unistyles';
+import { StyleSheet } from 'react-native-unistyles'
+import { spacing } from '../../tokens/spacing'
+import { colors } from '../../tokens/colors'
 
-export const styles = createStyleSheet(() => ({
+// eslint-disable-next-line @typescript-eslint/no-unused-vars -- TODO: use colors from theme
+export const styles = StyleSheet.create((theme) => ({
   card: {
     marginBottom: spacing[4],
   },
@@ -36,4 +39,4 @@ export const styles = createStyleSheet(() => ({
   tag: {
     marginLeft: spacing[2],
   },
-}));
+}))

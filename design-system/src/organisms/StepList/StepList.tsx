@@ -9,18 +9,16 @@ import { styles } from './StepList.styles';
 
 export const StepList = ({
   steps,
-  style,
   ...props
 }: StepListProps) => {
   return (
-    <View style={[styles.container, style]} {...props}>
+    <View style={styles.container} {...props}>
       {steps.map((step, index) => (
         <StepIndicator
           key={index}
           stepNumber={step.stepNumber || index + 1}
           instruction={step.instruction}
           duration={step.duration}
-          style={styles.step}
         />
       ))}
     </View>

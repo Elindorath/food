@@ -37,6 +37,8 @@ const settings = {
 } as const
 
 export const configureStyles = () => {
+  console.log('configureStyles')
+
   StyleSheet.configure({
     themes: appThemes,
     breakpoints,

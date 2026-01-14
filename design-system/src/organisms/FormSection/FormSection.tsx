@@ -11,15 +11,14 @@ import { styles } from './FormSection.styles';
 export const FormSection = ({
   title,
   children,
-  style,
   ...props
 }: FormSectionProps) => {
   return (
-    <View style={[styles.container, style]} {...props}>
-      <Text variant="h5" style={styles.title}>
+    <View style={styles.container} {...props}>
+      <Text variant="h5">
         {title}
       </Text>
-      <Divider style={styles.divider} />
+      <Divider />
       <View style={styles.content}>{children}</View>
     </View>
   );

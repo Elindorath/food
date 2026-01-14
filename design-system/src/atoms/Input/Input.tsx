@@ -42,7 +42,7 @@ export const Input = ({
 
   return (
     <View style={styles.container}>
-      {label !== undefined && <Text variant="label" style={styles.label}>{label}</Text>}
+      {label !== undefined && <Text variant="label">{label}</Text>}
       <TextInput
         style={styles.input}
         onFocus={handleFocus}
@@ -51,8 +51,8 @@ export const Input = ({
         placeholderTextColor="#9CA3AF"
         {...props}
       />
-      {error !== undefined && <Text style={styles.errorText}>{error}</Text>}
-      {(error === undefined) && helperText !== undefined && <Text style={styles.helperText}>{helperText}</Text>}
+      {error !== undefined && <Text variant="bodySmall">{error}</Text>}
+      {(error === undefined) && helperText !== undefined && <Text variant="bodySmall">{helperText}</Text>}
     </View>
   )
 }

@@ -15,20 +15,19 @@ export const ErrorState = ({
   message,
   retryLabel = 'Réessayer',
   onRetry,
-  style,
   ...props
 }: ErrorStateProps) => {
   return (
-    <View style={[styles.container, style]} {...props}>
-      <Icon name="alert-circle" size="xlarge" color={colors.error[600]} style={styles.icon} />
-      <Text variant="h4" style={styles.title}>
+    <View style={styles.container} {...props}>
+      <Icon name="alert-circle" size="xlarge" color={colors.error[600]} />
+      <Text variant="h4">
         {title}
       </Text>
-      <Text variant="body" style={styles.message}>
+      <Text variant="body">
         {message}
       </Text>
       {onRetry && (
-        <Button variant="primary" onPress={onRetry} style={styles.button}>
+        <Button variant="primary" onPress={onRetry}>
           {retryLabel}
         </Button>
       )}

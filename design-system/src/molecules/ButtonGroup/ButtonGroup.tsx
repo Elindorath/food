@@ -12,15 +12,14 @@ export const ButtonGroup = ({
   variant = 'primary',
   size = 'medium',
   fullWidth = false,
-  style,
 }: ButtonGroupProps) => {
-  return (
-    <View style={[styles.container, fullWidth && styles.fullWidth, style]}>
-      {buttons.map((button, index) => {
-        const buttonStyle = index > 0
-          ? [styles.button, styles.buttonSpacing]
-          : styles.button;
+  styles.useVariants({
+    fullWidth,
+  })
 
+  return (
+    <View style={styles.container}>
+      {buttons.map((button, index) => {
         return (
           <Button
             key={index}
@@ -28,7 +27,6 @@ export const ButtonGroup = ({
             size={size}
             onPress={button.onPress}
             disabled={button.disabled}
-            style={buttonStyle}
           >
             {button.label}
           </Button>

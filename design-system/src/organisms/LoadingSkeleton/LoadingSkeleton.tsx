@@ -4,61 +4,20 @@
 
 import { useEffect, useRef } from 'react';
 import { Animated } from 'react-native';
-import type { ViewStyle } from 'react-native';
-import type { LoadingSkeletonProps, SkeletonType } from './LoadingSkeleton.types';
-import { colors } from '../../tokens/colors';
-import { spacing } from '../../tokens/spacing';
-
-const getSkeletonStyle = (type: SkeletonType, width?: number | string, height?: number): ViewStyle => {
-  const baseStyle: ViewStyle = {
-    backgroundColor: colors.neutral[200],
-    borderRadius: spacing[1],
-  };
-
-  switch (type) {
-    case 'text':
-      return {
-        ...baseStyle,
-        width: width ?? '100%',
-        height: height ?? 16,
-      };
-    case 'card':
-      return {
-        ...baseStyle,
-        width: width ?? '100%',
-        height: height ?? 200,
-        borderRadius: spacing[3],
-      };
-
-    case 'circle': {
-      const size = typeof width === 'number' ? width : height ?? 40;
-
-      return {
-        ...baseStyle,
-        width: size,
-        height: size,
-        borderRadius: size / 2,
-      };
-    }
-
-    case 'rect':
-    default:
-      return {
-        ...baseStyle,
-        width: width ?? '100%',
-        height: height ?? 100,
-      };
-  }
-};
+import type { LoadingSkeletonProps } from './LoadingSkeleton.types';
+import { styles } from './LoadingSkeleton.styles';
 
 export const LoadingSkeleton = ({
   type = 'rect',
   width,
   height,
-  style,
   ...props
 }: LoadingSkeletonProps) => {
   const fadeAnim = useRef(new Animated.Value(0.3)).current;
+
+  styles.useVariants({
+    type,
+  })
 
   useEffect(() => {
     const animation = Animated.loop(
@@ -81,14 +40,11 @@ export const LoadingSkeleton = ({
     return () => { animation.stop(); };
   }, [fadeAnim]);
 
-  const skeletonStyle = getSkeletonStyle(type, width, height);
-
   return (
     <Animated.View
       style={[
-        skeletonStyle,
+        styles.container(width, height),
         { opacity: fadeAnim },
-        style,
       ]}
       {...props}
     />
