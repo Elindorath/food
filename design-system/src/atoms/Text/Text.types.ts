@@ -3,9 +3,9 @@
  */
 
 import type { TextProps as RNTextProps } from 'react-native';
-import type { typography } from '../../tokens/typography';
+import type { Typography } from '../../tokens/typography';
 
-export type TextVariant = keyof typeof typography.variants;
+export type TextVariant = keyof Typography;
 
 export type TextProps = Omit<RNTextProps, 'style'> & {
   variant?: TextVariant;

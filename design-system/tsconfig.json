@@ -13,7 +13,19 @@
     "declaration": true,
     "declarationMap": true,
     "outDir": "./dist",
-    "rootDir": "."
+    "rootDir": ".",
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "paths": {
+      "@/assets": ["./assets/main.ts"],
+      "@/atoms/*": ["./src/atoms/*"],
+      "@/molecules/*": ["./src/molecules/*"],
+      "@/organisms/*": ["./src/organisms/*"],
+      "@/templates/*": ["./src/templates/*"],
+      "@/technical/*": ["./src/technical/*"],
+      "@/tokens/*": ["./src/tokens/*"],
+      "@/theme/*": ["./src/theme/*"],
+    }
   },
   "exclude": ["node_modules", "dist"]
 }

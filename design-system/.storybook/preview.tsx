@@ -3,7 +3,7 @@ import type { Preview } from '@storybook/react-native-web-vite'
 import { View } from 'react-native'
 import { StyleSheet } from 'react-native-unistyles'
 import { configureStyles } from '../src/unistyles'
-import { useFonts } from 'expo-font'
+import { FontLoader } from '../src/technical/FontLoader/FontLoader.tsx'
 
 configureStyles();
 
@@ -31,19 +31,12 @@ const preview: Preview = {
   },
   decorators: [
     (Story) => {
-      const [fontsLoaded] = useFonts({
-        'PlayfairDisplay': require('../assets/fonts/PlayfairDisplay-Regular.ttf'),
-        'Inter-Bold': require('../assets/fonts/Inter_28pt-Bold.ttf'),
-      })
-
-      if (!fontsLoaded) {
-        return <View />
-      }
-
       return (
-        <View style={styles.container}>
-          <Story />
-        </View>
+        <FontLoader>
+          <View style={styles.container}>
+            <Story />
+          </View>
+        </FontLoader>
       )
     },
   ],
