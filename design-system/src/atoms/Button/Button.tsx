@@ -2,7 +2,7 @@
  * Button component - Interactive button
  */
 
-import { TouchableOpacity } from 'react-native'
+import { Pressable } from 'react-native'
 
 import { Text } from '@/atoms/Text/Text'
 import { Spinner } from '@/atoms/Spinner/Spinner'
@@ -33,14 +33,14 @@ export const Button = ({
     variant,
     size,
     fullWidth,
+    isDisabled: disabled,
   })
 
   return (
-    <TouchableOpacity
-      style={styles.container}
+    <Pressable
+      style={({ pressed }) => styles.container({ pressed })}
       onPress={onPress}
       disabled={disabled || loading}
-      activeOpacity={0.7}
       {...props}
     >
       {loading ? (
@@ -48,6 +48,6 @@ export const Button = ({
       ) : (
         <Text variant={textVariantMap[size]}>{children}</Text>
       )}
-    </TouchableOpacity>
+    </Pressable>
   )
 }

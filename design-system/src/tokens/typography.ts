@@ -3,8 +3,10 @@
  * Defines font sizes, weights, line heights, and letter spacing
  */
 
-const fontFamily = {
-  title: 'PlayfairDisplay',
+import type { Fonts } from "@/assets";
+
+const fontFamily: { [key: string]: keyof typeof Fonts } = {
+  title: 'Lora',
   body: 'Inter',
 } as const;
 

@@ -2,12 +2,12 @@
  * Button component types
  */
 
-import type { TouchableOpacityProps } from 'react-native';
+import type { PressableProps } from 'react-native';
 
-export type ButtonVariant = 'primary' | 'secondary' | 'tertiary' | 'outline';
+export type ButtonVariant = 'primary' | 'secondary' | 'ghost';
 export type ButtonSize = 'small' | 'medium' | 'large';
 
-export type ButtonProps = Omit<TouchableOpacityProps, 'style'> & {
+export type ButtonProps = Omit<PressableProps, 'style'> & {
   children: React.ReactNode;
   variant?: ButtonVariant;
   size?: ButtonSize;

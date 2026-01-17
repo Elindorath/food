@@ -4,10 +4,8 @@
 
 import { StyleSheet } from 'react-native-unistyles'
 
-import { colors } from '../../tokens/colors'
 import { spacing } from '../../tokens/spacing'
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars -- TODO: use colors from theme
 export const styles = StyleSheet.create((theme) => ({
   container: {
     alignSelf: 'flex-start',
@@ -15,20 +13,19 @@ export const styles = StyleSheet.create((theme) => ({
     variants: {
       color: {
         primary: {
-          backgroundColor: theme.colors.primaryBackground,
-          // backgroundColor: colors.primary[100],
+          backgroundColor: theme.colors.background.primary,
         },
         success: {
-          backgroundColor: colors.success[100],
+          backgroundColor: theme.colors.background.success,
         },
         error: {
-          backgroundColor: colors.error[100],
+          backgroundColor: theme.colors.background.error,
         },
         warning: {
-          backgroundColor: colors.warning[100],
+          backgroundColor: theme.colors.background.warning,
         },
         info: {
-          backgroundColor: colors.info[100],
+          backgroundColor: theme.colors.background.info,
         },
       },
       size: {

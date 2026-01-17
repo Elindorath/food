@@ -49,18 +49,10 @@ export const Secondary: Story = {
   },
 };
 
-export const Tertiary: Story = {
+export const Ghost: Story = {
   args: {
     children: 'Button',
-    variant: 'tertiary',
-    size: 'medium',
-  },
-};
-
-export const Outline: Story = {
-  args: {
-    children: 'Button',
-    variant: 'outline',
+    variant: 'ghost',
     size: 'medium',
   },
 };

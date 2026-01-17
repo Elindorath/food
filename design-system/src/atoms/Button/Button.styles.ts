@@ -4,46 +4,53 @@
 
 import { StyleSheet } from 'react-native-unistyles'
 
-import { colors } from '../../tokens/colors'
 import { spacing } from '../../tokens/spacing'
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars -- TODO: use colors from theme
 export const styles = StyleSheet.create((theme) => ({
-  container: {
+  container: ({ pressed }: { pressed: boolean }) => ({
     borderRadius: spacing[2],
     alignItems: 'center',
     justifyContent: 'center',
+    _web: {
+      cursor: 'pointer',
+    },
     variants: {
       variant: {
         primary: {
-          backgroundColor: colors.primary[600],
-          borderWidth: 0,
+          backgroundColor: pressed ? theme.colors.background.accentStrong : theme.colors.background.accent,
+          borderWidth: 1,
           borderColor: 'transparent',
           opacity: 1,
+          _web: {
+            _hover: {
+              backgroundColor: theme.colors.background.accentWeak,
+            },
+            _active: {
+              backgroundColor: theme.colors.background.accentStrong,
+            },
+            _disabled: {
+              backgroundColor: theme.colors.background.default,
+            },
+          },
         },
         secondary: {
-          backgroundColor: colors.secondary[600],
-          borderWidth: 0,
-          borderColor: 'transparent',
-          opacity: 1,
-        },
-        tertiary: {
-          backgroundColor: colors.neutral[200],
-          borderWidth: 0,
-          borderColor: 'transparent',
-          opacity: 1,
-        },
-        outline: {
-          backgroundColor: 'transparent',
+          backgroundColor: pressed ? theme.colors.background.defaultStrong : theme.colors.background.default,
           borderWidth: 1,
-          borderColor: colors.primary[600],
+          borderColor: theme.colors.border.default,
           opacity: 1,
+          _web: {
+            _hover: {
+              backgroundColor: theme.colors.background.surface,
+            },
+            _active: {
+              backgroundColor: theme.colors.background.defaultStrong,
+            },
+          },
         },
-        disabled: {
-          backgroundColor: colors.neutral[300],
+        ghost: {
           borderWidth: 0,
           borderColor: 'transparent',
-          opacity: 0.5,
+          opacity: 1,
         },
       },
       size: {
@@ -71,6 +78,33 @@ export const styles = StyleSheet.create((theme) => ({
           width: 'auto',
         },
       },
+      isDisabled: {
+        true: {},
+        false: {},
+      },
     },
-  },
+    // compoundVariants: [
+    //   {
+    //     isDisabled: true,
+    //     variant: 'primary',
+    //     styles: {
+    //       backgroundColor: theme.colors.background.default,
+    //     },
+    //   },
+    //   {
+    //     isDisabled: true,
+    //     variant: 'secondary',
+    //     styles: {
+    //       backgroundColor: theme.colors.background.default,
+    //     },
+    //   },
+    //   {
+    //     isDisabled: true,
+    //     variant: 'ghost',
+    //     styles: {
+    //       backgroundColor: theme.colors.background.default,
+    //     },
+    //   },
+    // ],
+  }),
 }))

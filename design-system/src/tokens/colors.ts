@@ -3,94 +3,102 @@
  * Defines the color palette for the application
  */
 
+/*
+Palette
+#87A382
+#E49079
+#F9FBF7
+#2D3436
+*/
+
 export const colors = {
   // Primary colors
   primary: {
-    50: '#F0F9FF',
-    100: '#E0F2FE',
-    200: '#BAE6FD',
-    300: '#7DD3FC',
-    400: '#38BDF8',
-    500: '#0EA5E9',
-    600: '#0284C7',
-    700: '#0369A1',
-    800: '#075985',
-    900: '#0C4A6E',
+    50: '#F3F6F2', // Very light backgrounds, success alerts.
+    100: '#E8F0E6', // Badge backgrounds, hover on light elements.
+    200: '#D1E1CE', // Light borders, colored separators.
+    300: '#B9D1B6', // Secondary icons, illustrations.
+    400: '#A0C29E', // Decorative elements.
+    500: '#87A382', // Your main brand color.
+    600: '#6B8268', // Hover state of primary elements.
+    700: '#4F614E', // Text on light background (AA Accessibility).
+    800: '#333F32', // Text on very light background (AAA Accessibility).
+    900: '#181E18', // Darkest shades for contrast.
   },
   // Secondary colors
   secondary: {
-    50: '#FDF4FF',
-    100: '#FAE8FF',
-    200: '#F5D0FE',
-    300: '#F0ABFC',
-    400: '#E879F9',
-    500: '#D946EF',
-    600: '#C026D3',
-    700: '#A21CAF',
-    800: '#86198F',
-    900: '#701A75',
+    50: '#FDF4F2', // Notification background, subtle highlight.
+    100: '#FAE9E4', // "Favorite" badge, light hover.
+    200: '#F6D3C9', // Interaction borders.
+    300: '#F1BDAD', // Gradients, illustrations.
+    400: '#EAA793', // Secondary buttons.
+    500: '#E49079', // Your main action button (CTA).
+    600: '#B67361', // Button hover state.
+    700: '#895649', // Action text on white background.
+    800: '#5B3A30', // Pressed state or very dark text.
+    900: '#2D1D18', // Maximum contrast details.
   },
   // Semantic colors
   success: {
-    50: '#F0FDF4',
-    100: '#DCFCE7',
-    200: '#BBF7D0',
-    300: '#86EFAC',
-    400: '#4ADE80',
-    500: '#22C55E',
-    600: '#16A34A',
-    700: '#15803D',
-    800: '#166534',
-    900: '#14532D',
+    50: '#F3F6F2', // "Recipe saved" banner background.
+    100: '#E8F0E6', // "Healthy" or "Organic" badge background.
+    200: '#D1E1CE', // Light success border.
+    300: '#B9D1B6', // Secondary validation icons.
+    400: '#A0C29E', // –
+    500: '#87A382', // Check icon, validated step.
+    600: '#6B8268', // Hover state on success elements.
+    700: '#4F614E', // Success text on light background.
+    800: '#333F32', // Success text (High contrast).
+    900: '#181E18', // Dark text on green 50 background.
   },
   error: {
-    50: '#FEF2F2',
-    100: '#FEE2E2',
-    200: '#FECACA',
-    300: '#FCA5A5',
-    400: '#F87171',
-    500: '#EF4444',
-    600: '#DC2626',
-    700: '#B91C1C',
-    800: '#991B1B',
-    900: '#7F1D1D',
+    50: '#FEF5F5', // Invalid form field background.
+    100: '#FDE8E7', // "Missing ingredient" alert background.
+    200: '#FAD1D0', // Error border.
+    300: '#F6A9A6', // –
+    400: '#EE817C', // –
+    500: '#E25A53', // "Delete" button, error icon.
+    600: '#BD4B46', // Hover on critical button.
+    700: '#973C38', // Error text (AA Accessibility).
+    800: '#712D2A', // Error text (AAA Accessibility).
+    900: '#4C1D1C', // Dark text on red alert.
   },
   warning: {
-    50: '#FFFBEB',
-    100: '#FEF3C7',
-    200: '#FDE68A',
-    300: '#FCD34D',
-    400: '#FBBF24',
-    500: '#F59E0B',
-    600: '#D97706',
-    700: '#B45309',
-    800: '#92400E',
-    900: '#78350F',
+    50: '#FFF9F2', // Soft warning background.
+    100: '#FFF2E3', // "Allergens" badge background.
+    200: '#FFE2C2', // Warning border.
+    300: '#FFCD99', // –
+    400: '#F9B77E', // –
+    500: '#F4A261', // "Attention" icon, timer almost finished.
+    600: '#CC8751', // Hover on attention elements.
+    700: '#A46C41', // Warning text on light background.
+    800: '#7B5131', // –
+    900: '#523621', // Dark text on ochre alert.
   },
   info: {
-    50: '#EFF6FF',
-    100: '#DBEAFE',
-    200: '#BFDBFE',
-    300: '#93C5FD',
-    400: '#60A5FA',
-    500: '#3B82F6',
-    600: '#2563EB',
-    700: '#1D4ED8',
-    800: '#1E40AF',
-    900: '#1E3A8A',
+    50: '#F4F9FB', // "Chef's tip" bubble background.
+    100: '#E9F3F7', // Neutral information background.
+    200: '#D3E6F0', // Information border.
+    300: '#A9CDE1', // –
+    400: '#7EB4D1', // –
+    500: '#6096BA', // "Did you know?" icon, Nutrition info.
+    600: '#507D9B', // Hover on information links.
+    700: '#40647D', // Info text on light background.
+    800: '#304B5E', // –
+    900: '#20323E', // Dark text on blue alert.
   },
   // Neutral colors
   neutral: {
-    50: '#FAFAFA',
-    100: '#F5F5F5',
-    200: '#E5E5E5',
-    300: '#D4D4D4',
-    400: '#A3A3A3',
-    500: '#737373',
-    600: '#525252',
-    700: '#404040',
-    800: '#262626',
-    900: '#171717',
+    50: '#F9FBF7', // Your main application background.
+    100: '#F2F4EE', // Card backgrounds, search bars.
+    200: '#E5E9DF', // Card borders, dividers.
+    300: '#D0D6C9', // Form borders (input).
+    400: '#B2B9AB', // Disabled icons, placeholder text.
+    500: '#939C8E', // Caption text, secondary metadata.
+    600: '#747B70', // Secondary text (e.g., reading time).
+    700: '#555A52', // Readable text on light background.
+    800: '#363A35', // Important subtitles.
+    900: '#2D3436', // Your main text (Anthracite).
   },
 } as const;
 
