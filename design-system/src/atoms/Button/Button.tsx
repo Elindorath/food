@@ -2,11 +2,22 @@
  * Button component - Interactive button
  */
 
-import { TouchableOpacity } from 'react-native';
-import type { ButtonProps } from './Button.types';
-import { Text } from '../Text/Text';
-import { Spinner } from '../Spinner/Spinner';
-import { styles } from './Button.styles';
+import { TouchableOpacity } from 'react-native'
+
+import { Text } from '@/atoms/Text/Text'
+import { Spinner } from '@/atoms/Spinner/Spinner'
+
+import { styles } from './Button.styles'
+
+import type { TextVariant } from '@/atoms/Text/Text.types'
+
+import type { ButtonProps, ButtonSize } from './Button.types'
+
+const textVariantMap: { [key in ButtonSize]: TextVariant } = {
+  small: 'bodySmall',
+  medium: 'body',
+  large: 'h5',
+}
 
 export const Button = ({
   children,
@@ -35,8 +46,8 @@ export const Button = ({
       {loading ? (
         <Spinner size="small" />
       ) : (
-        <Text variant="body">{children}</Text>
+        <Text variant={textVariantMap[size]}>{children}</Text>
       )}
     </TouchableOpacity>
-  );
-};
+  )
+}

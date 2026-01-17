@@ -6,6 +6,22 @@ import { colors } from '../tokens/colors';
 
 export const lightTheme = {
   colors: {
+    backgrounds: {
+      default: colors.neutral[50],
+      accent: '#FFFFFF',
+      accentStrong: colors.neutral[100],
+
+      default: colors.neutral.neutral100,
+      accent: colors.neutral.neutral200,
+      accentStrong: colors.neutral.neutral300,
+      accentAlt: colors.neutral.neutral800,
+      accentAltWeak: colors.neutral.neutral700,
+      accentAltWeaker: colors.neutral.neutral600,
+      success: colors.green.green100,
+      warning: colors.orange.orange100,
+      destructive: colors.red.red100,
+    },
+
     // Background colors
     background: colors.neutral[50],
     backgroundSecondary: '#FFFFFF',

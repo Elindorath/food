@@ -11,7 +11,7 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ['default', 'primary', 'success', 'error', 'warning', 'info'],
+      options: ['primary', 'success', 'error', 'warning', 'info'],
     },
     size: {
       control: 'select',
@@ -23,14 +23,6 @@ const meta = {
 export default meta;
 
 type Story = StoryObj<typeof Badge>;
-
-export const Default: Story = {
-  args: {
-    children: 'Badge',
-    variant: 'default',
-    size: 'medium',
-  },
-};
 
 export const Primary: Story = {
   args: {
@@ -91,7 +83,6 @@ export const Large: Story = {
 export const AllVariants: Story = {
   render: () => (
     <>
-      <Badge variant="default">Default</Badge>
       <Badge variant="primary">Primary</Badge>
       <Badge variant="success">Success</Badge>
       <Badge variant="error">Error</Badge>

@@ -6,7 +6,6 @@ import { StyleSheet } from 'react-native-unistyles'
 
 import { colors } from '../../tokens/colors'
 import { spacing } from '../../tokens/spacing'
-import { typography } from '../../tokens/typography'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars -- TODO: use colors from theme
 export const styles = StyleSheet.create((theme) => ({
@@ -70,39 +69,6 @@ export const styles = StyleSheet.create((theme) => ({
         },
         false: {
           width: 'auto',
-        },
-      },
-    },
-  },
-  text: {
-    fontWeight: typography.fontWeight.semibold,
-    variants: {
-      variant: {
-        primary: {
-          color: '#FFFFFF',
-        },
-        secondary: {
-          color: '#FFFFFF',
-        },
-        tertiary: {
-          color: colors.neutral[900],
-        },
-        outline: {
-          color: colors.primary[600],
-        },
-        disabled: {
-          color: colors.neutral[600],
-        },
-      },
-      size: {
-        small: {
-          fontSize: typography.fontSize.sm,
-        },
-        medium: {
-          fontSize: typography.fontSize.base,
-        },
-        large: {
-          fontSize: typography.fontSize.lg,
         },
       },
     },

@@ -6,7 +6,6 @@ import { StyleSheet } from 'react-native-unistyles'
 
 import { colors } from '../../tokens/colors'
 import { spacing } from '../../tokens/spacing'
-import { typography } from '../../tokens/typography'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars -- TODO: use colors from theme
 export const styles = StyleSheet.create((theme) => ({
@@ -15,11 +14,9 @@ export const styles = StyleSheet.create((theme) => ({
     borderRadius: spacing[2],
     variants: {
       color: {
-        default: {
-          backgroundColor: colors.neutral[200],
-        },
         primary: {
-          backgroundColor: colors.primary[100],
+          backgroundColor: theme.colors.primaryBackground,
+          // backgroundColor: colors.primary[100],
         },
         success: {
           backgroundColor: colors.success[100],
@@ -46,42 +43,6 @@ export const styles = StyleSheet.create((theme) => ({
         large: {
           paddingHorizontal: spacing[3],
           paddingVertical: spacing[3] / 2,
-        },
-      },
-    },
-  },
-  text: {
-    fontWeight: typography.fontWeight.medium,
-    variants: {
-      color: {
-        default: {
-          color: colors.neutral[800],
-        },
-        primary: {
-          color: colors.primary[700],
-        },
-        success: {
-          color: colors.success[700],
-        },
-        error: {
-          color: colors.error[700],
-        },
-        warning: {
-          color: colors.warning[700],
-        },
-        info: {
-          color: colors.info[700],
-        },
-      },
-      size: {
-        small: {
-          fontSize: typography.fontSize.xs,
-        },
-        medium: {
-          fontSize: typography.fontSize.sm,
-        },
-        large: {
-          fontSize: typography.fontSize.base,
         },
       },
     },
