@@ -4,7 +4,7 @@
 
 import { ActivityIndicator } from 'react-native';
 import type { SpinnerProps } from './Spinner.types';
-import { colors } from '../../tokens/colors';
+import { colors } from '../../tokens/colors/colors';
 import { styles } from './Spinner.styles';
 
 export const Spinner = ({

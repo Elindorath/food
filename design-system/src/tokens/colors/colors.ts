@@ -101,32 +101,3 @@ export const colors = {
     900: '#2D3436', // Your main text (Anthracite).
   },
 } as const;
-
-export type ColorPalette = typeof colors;
-
-export const textColors = {
-  primary: colors.neutral[900],
-  secondary: colors.neutral[700],
-  tertiary: colors.neutral[500],
-  inverse: colors.neutral[50],
-} as const;
-
-export type TextColor = typeof textColors;
-
-export const borderColors = {
-  primary: colors.primary[600],
-  secondary: colors.secondary[600],
-  tertiary: colors.neutral[300],
-  inverse: colors.neutral[900],
-} as const;
-
-export type BorderColor = typeof borderColors;
-
-export const backgroundColors = {
-  primary: colors.primary[50],
-  secondary: colors.secondary[50],
-  tertiary: colors.neutral[100],
-  inverse: colors.neutral[900],
-} as const;
-
-export type BackgroundColor = typeof backgroundColors;

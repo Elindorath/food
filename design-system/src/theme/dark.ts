@@ -2,7 +2,8 @@
  * Dark theme configuration
  */
 
-import { colors } from '../tokens/colors';
+import { colors } from '../tokens/colors/colors';
+import type { Theme } from './types';
 
 export const darkTheme = {
   colors: {
@@ -44,11 +45,11 @@ export const darkTheme = {
     // Texts (Inversion of the Neutral scale)
     text: {
       primary: colors.neutral[50],    // Main text almost white (#F9FBF7)
-      secondary: colors.neutral[400],  // Subtitles, metadata (#B2B9AB)
-      tertiary: colors.neutral[600],   // Very subtle mentions
-      onPrimary: colors.neutral[900],  // Black text on green button (for contrast)
-      onSecondary: colors.neutral[900], // Black text on terracotta button
-      success: colors.success[300],    // Use pastel tones for readability
+      secondary: colors.neutral[400], // Subtitles, metadata (#B2B9AB)
+      tertiary: colors.neutral[600],  // Very subtle mentions
+      onDefault: colors.neutral[50],  // Black text on green button (for contrast)
+      onAccent: colors.neutral[900],  // Black text on terracotta button
+      success: colors.success[300],   // Use pastel tones for readability
       error: colors.error[300],
       warning: colors.warning[300],
       info: colors.info[300],
@@ -73,6 +74,6 @@ export const darkTheme = {
       frost: 'rgba(45, 52, 54, 0.7)',  // Frost effect on Anthracite background
     },
   },
-} as const;
+} as const satisfies Theme;
 
 export type DarkTheme = typeof darkTheme;

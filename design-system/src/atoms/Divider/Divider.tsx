@@ -5,7 +5,7 @@
 import { View } from 'react-native'
 
 import type { DividerProps } from './Divider.types'
-import { colors } from '../../tokens/colors'
+import { colors } from '../../tokens/colors/colors'
 import { styles } from './Divider.styles'
 
 export const Divider = ({

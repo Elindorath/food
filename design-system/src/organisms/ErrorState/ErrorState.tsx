@@ -7,7 +7,7 @@ import { Icon } from '../../atoms/Icon/Icon';
 import { Text } from '../../atoms/Text/Text';
 import { Button } from '../../atoms/Button/Button';
 import type { ErrorStateProps } from './ErrorState.types';
-import { colors } from '../../tokens/colors';
+import { colors } from '../../tokens/colors/colors';
 import { styles } from './ErrorState.styles';
 
 export const ErrorState = ({

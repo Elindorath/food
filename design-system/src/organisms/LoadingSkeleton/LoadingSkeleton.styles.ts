@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native-unistyles'
-import { colors } from '../../tokens/colors'
+import { colors } from '../../tokens/colors/colors'
 import { spacing } from '../../tokens/spacing'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars -- TODO: use colors from theme

@@ -8,7 +8,7 @@
 
 import { View } from 'react-native';
 import type { IconProps, IconSize } from './Icon.types';
-import { colors } from '../../tokens/colors';
+import { colors } from '../../tokens/colors/colors';
 import { styles } from './Icon.styles';
 
 const sizeMap: { [key in IconSize]: number } = {

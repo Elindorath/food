@@ -4,7 +4,7 @@
 
 import { StyleSheet } from 'react-native-unistyles'
 
-import { colors } from '../../tokens/colors'
+import { colors } from '../../tokens/colors/colors'
 import { spacing } from '../../tokens/spacing'
 import { typography } from '../../tokens/typography'
 

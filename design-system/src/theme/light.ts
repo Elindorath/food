@@ -2,7 +2,8 @@
  * Light theme configuration
  */
 
-import { colors } from '../tokens/colors';
+import { colors } from '../tokens/colors/colors';
+import type { Theme } from './types';
 
 export const lightTheme = {
   colors: {
@@ -46,8 +47,8 @@ export const lightTheme = {
       primary: colors.neutral[900],   // Main text titles and body
       secondary: colors.neutral[600], // Subtitles, reading time, dates
       tertiary: colors.neutral[400],  // Placeholders, legal mentions
-      onPrimary: '#FFFFFF',           // Text on green buttons
-      onSecondary: '#FFFFFF',         // Text on terracotta buttons (CTA)
+      onDefault: colors.neutral[900],           // Text on green buttons
+      onAccent: colors.neutral[50],   // Text on terracotta buttons (CTA)
       success: colors.success[700],   // Alert text (AA accessible)
       error: colors.error[700],       // Error text (AA accessible)
       warning: colors.warning[700],   // Warning text
@@ -73,6 +74,6 @@ export const lightTheme = {
       frost: 'rgba(249, 251, 247, 0.8)', // Frost effect on white broken background
     },
   },
-} as const;
+} as const satisfies Theme;
 
 export type LightTheme = typeof lightTheme;

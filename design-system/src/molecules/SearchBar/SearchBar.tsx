@@ -7,7 +7,7 @@ import { View, TouchableOpacity } from 'react-native';
 import { Input } from '../../atoms/Input/Input';
 import { Icon } from '../../atoms/Icon/Icon';
 import type { SearchBarProps } from './SearchBar.types';
-import { colors } from '../../tokens/colors';
+import { colors } from '../../tokens/colors/colors';
 import { styles } from './SearchBar.styles';
 
 export const SearchBar = ({

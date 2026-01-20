@@ -6,7 +6,7 @@
  */
 
 // Tokens
-export * from './tokens/colors';
+export * from './tokens/colors/colors';
 export * from './tokens/typography';
 export * from './tokens/spacing';
 export * from './tokens/shadows';

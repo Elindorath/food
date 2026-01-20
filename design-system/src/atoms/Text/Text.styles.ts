@@ -1,11 +1,12 @@
 import { StyleSheet } from 'react-native-unistyles'
 
-import { typography } from '../../tokens/typography';
+import { typography } from '@/tokens/typography';
+import type { TextColor } from '@/theme/types';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars -- TODO: use colors from theme
 export const styles = StyleSheet.create((theme) => ({
-  text: (color?: string) => ({
-    ...(color !== undefined ? { color } : {}),
+  text: (textColor?: TextColor) => ({
+    ...(textColor !== undefined ? { color: theme.colors.text[textColor] } : {}),
     variants: {
       variant: {
         h1: {

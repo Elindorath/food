@@ -8,7 +8,7 @@ import { styles } from './Text.styles';
 
 export const Text = ({
   variant = 'body',
-  color,
+  textColor,
   children,
   ...props
 }: TextProps) => {
@@ -17,7 +17,7 @@ export const Text = ({
   })
 
   return (
-    <RNText style={styles.text(color)} {...props}>
+    <RNText style={styles.text(textColor)} {...props}>
       {children}
     </RNText>
   );
