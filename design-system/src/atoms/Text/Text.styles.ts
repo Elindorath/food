@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native-unistyles'
 
-import { typography } from '@/tokens/typography';
+import { typography } from '@/tokens/typography/typography';
 import type { TextColor } from '@/theme/types';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars -- TODO: use colors from theme

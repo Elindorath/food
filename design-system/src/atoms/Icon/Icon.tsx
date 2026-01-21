@@ -1,15 +1,11 @@
 /**
- * Icon component - SVG icon wrapper
- *
- * Note: This is a placeholder component. In a real application,
- * you would integrate with an icon library like react-native-svg
- * or @expo/vector-icons
+ * Icon component
  */
 
-import { View } from 'react-native';
+import { colors } from '@/tokens/colors/colors';
+import { icons } from '@/tokens/icons/icons';
+
 import type { IconProps, IconSize } from './Icon.types';
-import { colors } from '../../tokens/colors/colors';
-import { styles } from './Icon.styles';
 
 const sizeMap: { [key in IconSize]: number } = {
   small: 16,
@@ -22,17 +18,17 @@ export const Icon = ({
   name,
   size = 'medium',
   color = colors.neutral[900],
-  style,
-  ...props
+  testID,
 }: IconProps) => {
-  // Placeholder implementation
-  // In production, replace with actual icon rendering
   const iconSize = sizeMap[size];
 
+  const IconComponent = icons[name];
+
   return (
-    <View
-      style={[styles.icon, { width: iconSize, height: iconSize, backgroundColor: color }, style]}
-      {...props}
+    <IconComponent
+      color={color}
+      size={iconSize}
+      testID={testID}
     />
   );
 };

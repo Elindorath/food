@@ -4,7 +4,7 @@
 
 import { View } from 'react-native';
 import type { CardProps } from './Card.types';
-import { shadows } from '../../tokens/shadows';
+import { shadows } from '../../tokens/shadows/shadows';
 import { styles } from './Card.styles';
 
 export const Card = ({ children, style, ...props }: CardProps) => {

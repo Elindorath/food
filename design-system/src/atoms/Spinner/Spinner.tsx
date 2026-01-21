@@ -2,10 +2,13 @@
  * Spinner component - Loading indicator
  */
 
-import { ActivityIndicator } from 'react-native';
-import type { SpinnerProps } from './Spinner.types';
-import { colors } from '../../tokens/colors/colors';
-import { styles } from './Spinner.styles';
+import { ActivityIndicator } from 'react-native'
+
+import { colors } from '@/tokens/colors/colors'
+
+import { styles } from './Spinner.styles'
+
+import type { SpinnerProps } from './Spinner.types'
 
 export const Spinner = ({
   size = 'medium',
@@ -23,5 +26,5 @@ export const Spinner = ({
       style={styles.spinner}
       {...props}
     />
-  );
-};
+  )
+}

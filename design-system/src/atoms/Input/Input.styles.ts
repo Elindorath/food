@@ -4,9 +4,9 @@
 
 import { StyleSheet } from 'react-native-unistyles'
 
-import { colors } from '../../tokens/colors/colors'
-import { spacing } from '../../tokens/spacing'
-import { typography } from '../../tokens/typography'
+import { colors } from '@/tokens/colors/colors'
+import { spacing } from '@/tokens/spacing/spacing'
+import { typography } from '@/tokens/typography/typography'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars -- TODO: use colors from theme
 export const styles = StyleSheet.create((theme) => ({
@@ -22,7 +22,7 @@ export const styles = StyleSheet.create((theme) => ({
     borderRadius: spacing[2],
     paddingHorizontal: spacing[3],
     paddingVertical: spacing[2],
-    fontSize: typography.fontSize.base,
+    fontSize: typography.body.fontSize,
     color: colors.neutral[900],
     backgroundColor: '#FFFFFF',
     minHeight: 44,
@@ -40,15 +40,5 @@ export const styles = StyleSheet.create((theme) => ({
         },
       },
     },
-  },
-  errorText: {
-    color: colors.error[600],
-    fontSize: typography.fontSize.sm,
-    marginTop: spacing[1],
-  },
-  helperText: {
-    color: colors.neutral[600],
-    fontSize: typography.fontSize.sm,
-    marginTop: spacing[1],
   },
 }));

@@ -3,11 +3,15 @@
  */
 
 import { useState } from 'react'
-import type { BlurEvent, FocusEvent } from 'react-native'
 import { TextInput, View } from 'react-native'
-import type { InputProps } from './Input.types'
-import { Text } from '../Text/Text'
+
+import { Text } from '@/atoms/Text/Text'
+
 import { styles } from './Input.styles'
+
+import type { BlurEvent, FocusEvent } from 'react-native'
+
+import type { InputProps } from './Input.types'
 
 export const Input = ({
   label,

@@ -3,7 +3,7 @@
  */
 
 import type { TextProps as RNTextProps } from 'react-native';
-import type { Typography } from '../../tokens/typography';
+import type { Typography } from '../../tokens/typography/typography';
 import type { TextColor } from '../../theme/types';
 
 export type TextVariant = keyof Typography;

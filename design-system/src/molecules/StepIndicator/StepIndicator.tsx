@@ -6,7 +6,7 @@ import { View } from 'react-native';
 import { Badge } from '../../atoms/Badge/Badge';
 import { Text } from '../../atoms/Text/Text';
 import type { StepIndicatorProps } from './StepIndicator.types';
-import { spacing } from '../../tokens/spacing';
+import { spacing } from '../../tokens/spacing/spacing';
 import { styles } from './StepIndicator.styles';
 
 export const StepIndicator = ({

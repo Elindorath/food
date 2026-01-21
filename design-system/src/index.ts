@@ -7,9 +7,9 @@
 
 // Tokens
 export * from './tokens/colors/colors';
-export * from './tokens/typography';
-export * from './tokens/spacing';
-export * from './tokens/shadows';
+export * from './tokens/typography/typography';
+export * from './tokens/spacing/spacing';
+export * from './tokens/shadows/shadows';
 
 // Themes
 export * from './theme/light';

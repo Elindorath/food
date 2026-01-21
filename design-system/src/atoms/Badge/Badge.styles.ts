@@ -4,7 +4,7 @@
 
 import { StyleSheet } from 'react-native-unistyles'
 
-import { spacing } from '../../tokens/spacing'
+import { spacing } from '../../tokens/spacing/spacing'
 
 export const styles = StyleSheet.create((theme) => ({
   container: {

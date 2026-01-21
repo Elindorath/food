@@ -1,6 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/react';
 import { View } from 'react-native';
+import { StyleSheet } from 'react-native-unistyles';
+
 import { Spinner } from './Spinner';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof Spinner> = {
   title: 'Atoms/Spinner',
@@ -51,7 +54,7 @@ export const CustomColor: Story = {
 
 export const AllSizes: Story = {
   render: () => (
-    <View style={{ flexDirection: 'row', gap: 24, alignItems: 'center' }}>
+    <View style={styles.container}>
       <Spinner size="small" />
       <Spinner size="medium" />
       <Spinner size="large" />
@@ -61,3 +64,11 @@ export const AllSizes: Story = {
     layout: 'padded',
   },
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    gap: 24,
+    alignItems: 'center',
+  },
+});

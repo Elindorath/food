@@ -1,7 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/react'
 import { View } from 'react-native'
+import { StyleSheet } from 'react-native-unistyles'
+
+import { Text } from '@/atoms/Text/Text'
+
 import { Divider } from './Divider'
-import { Text } from '../Text/Text'
+
+import type { Meta, StoryObj } from '@storybook/react'
 
 const meta: Meta<typeof Divider> = {
   title: 'Atoms/Divider',
@@ -30,7 +34,7 @@ export const Horizontal: Story = {
     orientation: 'horizontal',
   },
   render: (args) => (
-    <View style={{ width: 300 }}>
+    <View style={styles.horizontalContainer}>
       <Text>Content above</Text>
       <Divider {...args} />
       <Text>Content below</Text>
@@ -43,7 +47,7 @@ export const Vertical: Story = {
     orientation: 'vertical',
   },
   render: (args) => (
-    <View style={{ flexDirection: 'row', height: 100, alignItems: 'center' }}>
+    <View style={styles.verticalContainer}>
       <Text>Left</Text>
       <Divider {...args} />
       <Text>Right</Text>
@@ -57,10 +61,21 @@ export const CustomColor: Story = {
     color: '#3B82F6',
   },
   render: (args) => (
-    <View style={{ width: 300 }}>
+    <View style={styles.horizontalContainer}>
       <Text>Custom color divider</Text>
       <Divider {...args} />
       <Text>Below divider</Text>
     </View>
   ),
 }
+
+const styles = StyleSheet.create({
+  horizontalContainer: {
+    width: 300,
+  },
+  verticalContainer: {
+    flexDirection: 'row',
+    height: 100,
+    alignItems: 'center',
+  },
+})
