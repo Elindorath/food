@@ -2,24 +2,26 @@
  * ErrorState component - Icon + Text (message) + Button (retry)
  */
 
-import { View } from 'react-native';
-import { Icon } from '../../atoms/Icon/Icon';
-import { Text } from '../../atoms/Text/Text';
-import { Button } from '../../atoms/Button/Button';
-import type { ErrorStateProps } from './ErrorState.types';
-import { colors } from '../../tokens/colors/colors';
-import { styles } from './ErrorState.styles';
+import { View } from 'react-native'
+import { Icon } from '@/atoms/Icon/Icon'
+import { Text } from '@/atoms/Text/Text'
+import { Button } from '@/atoms/Button/Button'
+import { colors } from '@/tokens/colors/colors'
+
+import { styles } from './ErrorState.styles'
+
+import type { ErrorStateProps } from './ErrorState.types'
 
 export const ErrorState = ({
-  title = 'Une erreur est survenue',
+  title = 'An error occurred',
   message,
-  retryLabel = 'Réessayer',
+  retryLabel = 'Retry',
   onRetry,
   ...props
 }: ErrorStateProps) => {
   return (
     <View style={styles.container} {...props}>
-      <Icon name="alert-circle" size="xlarge" color={colors.error[600]} />
+      <Icon name="circleX" size="xlarge" color={colors.error[600]} />
       <Text variant="h4">
         {title}
       </Text>
@@ -32,5 +34,5 @@ export const ErrorState = ({
         </Button>
       )}
     </View>
-  );
-};
+  )
+}

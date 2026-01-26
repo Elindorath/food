@@ -2,8 +2,10 @@
  * EmptyState component types
  */
 
+import type { IconName } from '@/tokens/icons/icons';
+
 export type EmptyStateProps = {
-  icon?: string;
+  icon?: IconName;
   title: string;
   message?: string;
   actionLabel?: string;

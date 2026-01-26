@@ -1,8 +1,7 @@
 import { StyleSheet } from 'react-native-unistyles'
-import { spacing } from '../../tokens/spacing/spacing'
-import { colors } from '../../tokens/colors/colors'
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars -- TODO: use colors from theme
+import { spacing } from '@/tokens/spacing/spacing'
+
 export const styles = StyleSheet.create((theme) => ({
   container: {
     alignItems: 'center',
@@ -17,7 +16,7 @@ export const styles = StyleSheet.create((theme) => ({
     textAlign: 'center',
   },
   message: {
-    color: colors.neutral[600],
+    color: theme.colors.text.secondary,
     textAlign: 'center',
     marginBottom: spacing[6],
   },

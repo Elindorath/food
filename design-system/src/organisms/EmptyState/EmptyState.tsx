@@ -2,16 +2,19 @@
  * EmptyState component - Icon + Text (message) + Button (action)
  */
 
-import { View } from 'react-native';
-import { Icon } from '../../atoms/Icon/Icon';
-import { Text } from '../../atoms/Text/Text';
-import { Button } from '../../atoms/Button/Button';
-import type { EmptyStateProps } from './EmptyState.types';
-import { colors } from '../../tokens/colors/colors';
-import { styles } from './EmptyState.styles';
+import { View } from 'react-native'
+
+import { Icon } from '@/atoms/Icon/Icon'
+import { Text } from '@/atoms/Text/Text'
+import { Button } from '@/atoms/Button/Button'
+import { colors } from '@/tokens/colors/colors'
+
+import { styles } from './EmptyState.styles'
+
+import type { EmptyStateProps } from './EmptyState.types'
 
 export const EmptyState = ({
-  icon = 'inbox',
+  icon = 'search',
   title,
   message,
   actionLabel,
@@ -35,5 +38,5 @@ export const EmptyState = ({
         </Button>
       ) : null}
     </View>
-  );
-};
+  )
+}

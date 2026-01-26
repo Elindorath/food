@@ -1,4 +1,4 @@
-import { User, Heart, Home, Search, Share, Timer, ChefHat, Users, Flame, ShoppingBasket, Leaf, Lightbulb, Sprout } from 'lucide-react-native'
+import { User, Heart, Home, Search, Share, Timer, ChefHat, Users, Flame, ShoppingBasket, Leaf, Lightbulb, Sprout, CircleX } from 'lucide-react-native'
 
 export const icons = {
   user: User,
@@ -14,6 +14,7 @@ export const icons = {
   leaf: Leaf,
   lightbulb: Lightbulb,
   sprout: Sprout,
+  circleX: CircleX,
 }
 
 export type IconName = keyof typeof icons
